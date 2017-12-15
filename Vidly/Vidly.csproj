@@ -201,20 +201,29 @@
     <Compile Include="Migrations\201712151836134_InitialModel.Designer.cs">
       <DependentUpon>201712151836134_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712151847580_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201712151847580_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201712151847580_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151853064_AddMemebershipType.cs" />
+    <Compile Include="Migrations\201712151853064_AddMemebershipType.Designer.cs">
+      <DependentUpon>201712151853064_AddMemebershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151858142_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201712151858142_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201712151858142_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-Vidly-20171215111710.mdf" />
-    <Content Include="App_Data\aspnet-Vidly-20171215111710_log.ldf">
-      <DependentUpon>aspnet-Vidly-20171215111710.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -277,7 +286,9 @@
     <Content Include="Views\Customers\NoCustomers.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
@@ -294,6 +305,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712151836134_InitialModel.resx">
       <DependentUpon>201712151836134_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151847580_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201712151847580_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151853064_AddMemebershipType.resx">
+      <DependentUpon>201712151853064_AddMemebershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151858142_PopulateMembershipTypes.resx">
+      <DependentUpon>201712151858142_PopulateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
