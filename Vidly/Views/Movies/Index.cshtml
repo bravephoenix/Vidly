@@ -12,14 +12,16 @@
         <th>
             Movie
         </th>
-        <th></th>
+        <th>Genre</th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
         </td>
+        <td>@item.Genre.Name</td>
     </tr>
 }
 
