@@ -11,10 +11,11 @@
     @Html.ActionLink("New Customer", "New", "", new { @class="btn btn-primary" })
 </p>
 
-<table class="table table-bordered table-hover">
+<table id="customers" class="table table-bordered table-hover">
     <tr>
         <th>Customer</th>
         <th>Membership Type</th>
+        <th>Delete</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -23,7 +24,12 @@
             @Html.ActionLink(item.Name, "Edit", new { id=item.Id })
         </td>
         <td>@item.MembershipType.Name</td>
+        <td>
+            <button data-customer-id="@item.Id" class="btn-link js-delete">Delete</button>
+        </td>
     </tr>
 }
 
 </table>
+
+
