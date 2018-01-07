@@ -6,6 +6,9 @@
 }
 
 <h2>Movies</h2>
+<p>
+@Html.ActionLink("New Movie", "New", "", new { @class="btn btn-primary" })
+</p>
 
 <table class="table table-bordered table-hover">
     <tr>
@@ -19,7 +22,7 @@
 {
     <tr>
         <td>
-            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+            @Html.ActionLink(item.Name, "Edit", new { id = item.Id })
         </td>
         <td>@item.Genre.Name</td>
     </tr>

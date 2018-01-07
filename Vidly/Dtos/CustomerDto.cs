@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Vidly.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Vidly.Models
+namespace Vidly.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public int Id { get; set; }
 
@@ -14,16 +15,11 @@ namespace Vidly.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Display(Name ="Is Subscribed to Newsletter")]
         public bool IsSubscribedToNewsletter { get; set; }
 
-        public MembershipType MembershipType { get; set; }
-
         [Required]
-        [Display(Name="Membership Type")]
         public byte MembershipTypeId { get; set; }
 
-        [Display(Name="Date Of Birth")]
         [Min18Years]
         public DateTime? BirthDate { get; set; }
     }
