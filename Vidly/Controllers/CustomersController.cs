@@ -27,11 +27,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = _context.Customers.Include(c=>c.MembershipType).ToList();
-            if (customers.Count == 0)
-                return View("NoCustomers");
-
-            return View(customers);
+            return View();
         }
 
         public ActionResult Details(int id)

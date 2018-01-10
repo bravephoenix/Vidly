@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Vidly.Models;
+using Vidly.Dtos;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Dtos
@@ -16,6 +16,8 @@ namespace Vidly.Dtos
         public string Name { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
+
+        public MembershipTypeDto MembershipType { get; set; }
 
         [Required]
         public byte MembershipTypeId { get; set; }
