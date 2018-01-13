@@ -16,7 +16,7 @@ namespace Vidly.Models
 
         [Required]
         public DateTime ReleaseDate { get; set; }
-
+        
         public DateTime DateAdded { get; set; }
 
         public Genre Genre { get; set; }
@@ -27,5 +27,7 @@ namespace Vidly.Models
         [Required]
         [Range(1, 20, ErrorMessage ="Stock should be between 1-20")]
         public int NumberInStock { get; set; }
+
+        public int NumberAvailable { get; set; }
     }
 }
