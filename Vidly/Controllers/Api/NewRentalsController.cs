@@ -22,7 +22,7 @@ namespace Vidly.Controllers.Api
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == newRental.CustomerId);
 
-            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id));
+            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
 
             foreach (var movie in movies)
             {
